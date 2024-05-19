@@ -5,6 +5,9 @@
   "license": "MIT",
   "dependencies": {
     "cookie-parser": "^1.4.6",
-    "express": "^4.19.2"
+    "express": "^4.19.2",
+    "joi": "^17.13.1",
+    "lodash": "^4.17.21",
+    "whatsapp-web.js": "^1.23.0"
   }
 }

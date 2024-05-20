@@ -6,6 +6,8 @@ const _ = require('lodash');
 const Joi = require('joi');
 
 require('dotenv').config()
+
+const wwebVersion = '2.2412.54';
   
 const app = express(); 
 const client = new Client({
@@ -15,7 +17,11 @@ const client = new Client({
     puppeteer: {
         args: ['--no-sandbox', '--headless', '--disable-gpu'],
         executablePath: '/usr/bin/chromium-browser'
-    }
+    },
+    webVersionCache: {
+        type: 'remote',
+        remotePath: `https://raw.githubusercontent.com/wppconnect-team/wa-version/main/html/${wwebVersion}.html`,
+    },
 });
   
 app.use(express.json()); 

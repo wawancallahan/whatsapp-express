@@ -4,6 +4,8 @@ const cookieParser = require('cookie-parser');
 const { Client, LocalAuth } = require('whatsapp-web.js');
 const _ = require('lodash');
 const Joi = require('joi');
+
+require('dotenv').config()
   
 const app = express(); 
 const client = new Client({

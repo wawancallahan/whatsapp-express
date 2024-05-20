@@ -11,9 +11,7 @@ const wwebVersion = '2.2412.54';
   
 const app = express(); 
 const client = new Client({
-    authStrategy: new LocalAuth({
-        dataPath: './whatsapp'
-    }),
+    authStrategy: new LocalAuth(),
     puppeteer: {
         args: ['--no-sandbox', '--headless', '--disable-gpu'],
         executablePath: '/usr/bin/chromium-browser'

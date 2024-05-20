@@ -13,7 +13,7 @@ const client = new Client({
         dataPath: './whatsapp'
     }),
     puppeteer: {
-        args: ['--no-sandbox', '--disable-setuid-sandbox'],
+        args: ['--no-sandbox', '--headless', '--disable-gpu'],
         executablePath: '/usr/bin/chromium-browser'
     }
 });
